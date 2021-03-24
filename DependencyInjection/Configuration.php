@@ -17,8 +17,8 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('monolog_fluentd');
+        $treeBuilder = new TreeBuilder('monolog_fluentd');
+        $rootNode = $treeBuilder->getRootNode();
 
         $rootNode->children()
             ->scalarNode('port')->defaultValue(24224)->end()

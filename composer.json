@@ -1,11 +1,11 @@
 {
     "name": "revizto/monolog-fluentd-bundle",
-    "description": "Simple wrapper bundle for Symfony2 that extends Monolog with Fluentd support",
+    "description": "Simple wrapper bundle for Symfony5 that extends Monolog with Fluentd support",
     "type": "bundle",
     "authors": [{"name": "Alex Knol", "email": "alex@seretalabs.com"}],
     "require": {
         "symfony/monolog-bundle": "*",
-        "fluent/logger": "0.3.*"
+        "fluent/logger": "1.0.*"
     },
     "autoload": {
         "psr-0": {"Seretalabs\\MonologFluentdBundle\\": ""}
