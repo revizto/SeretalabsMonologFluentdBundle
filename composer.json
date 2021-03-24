@@ -4,6 +4,7 @@
     "type": "bundle",
     "authors": [{"name": "Alex Knol", "email": "alex@seretalabs.com"}],
     "require": {
+        "php": ">=7.4",
         "symfony/monolog-bundle": "*",
         "fluent/logger": "1.0.*"
     },

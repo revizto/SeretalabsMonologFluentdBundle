@@ -14,6 +14,7 @@
 namespace Seretalabs\MonologFluentdBundle\Monolog\Handler;
 
 use Fluent\Logger\FluentLogger;
+use Monolog\Formatter\FormatterInterface;
 use Monolog\Handler\AbstractProcessingHandler;
 use Monolog\Formatter\JsonFormatter;
 use Monolog\Logger;
@@ -90,7 +91,7 @@ class MonologFluentdHandler extends AbstractProcessingHandler
 	/**
 	 * {@inheritdoc}
 	 */
-	public function handleBatch(array $records)
+	public function handleBatch(array $records): void
 	{
 		$messages = array();
 
@@ -111,7 +112,7 @@ class MonologFluentdHandler extends AbstractProcessingHandler
 	/**
 	 * {@inheritdoc}
 	 */
-	protected function write(array $record)
+	protected function write(array $record): void
 	{
 		if (!$this->lazyLoadLogger()) {
 		    return;
@@ -141,7 +142,7 @@ class MonologFluentdHandler extends AbstractProcessingHandler
 	/**
 	 * {@inheritDoc}
 	 */
-	protected function getDefaultFormatter()
+	protected function getDefaultFormatter(): FormatterInterface
 	{
 		return new JsonFormatter;
 	}
